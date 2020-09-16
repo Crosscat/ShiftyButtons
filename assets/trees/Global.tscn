@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/scripts/global_data.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D" groups=[
+"Persist",
+]]
+script = ExtResource( 1 )
+[connection signal="ready" from="." to="." method="_on_Node2D_ready"]

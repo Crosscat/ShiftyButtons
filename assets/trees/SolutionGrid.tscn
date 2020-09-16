@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/trees/Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/scripts/highlight_grid.gd" type="Script" id=2]
+
+[node name="Grid" type="Area2D"]
+input_pickable = false
+collision_layer = 2
+script = ExtResource( 2 )
+
+[node name="Button" parent="." instance=ExtResource( 1 )]
+position = Vector2( -384, -384 )
+
+[node name="Button2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -128, -384 )
+index = 1
+
+[node name="Button3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 128, -384 )
+index = 2
+
+[node name="Button4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 384, -384 )
+index = 3
+
+[node name="Button5" parent="." instance=ExtResource( 1 )]
+position = Vector2( -384, -128 )
+index = 4
+
+[node name="Button6" parent="." instance=ExtResource( 1 )]
+position = Vector2( -128, -128 )
+index = 5
+
+[node name="Button7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 128, -128 )
+index = 6
+
+[node name="Button8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 384, -128 )
+index = 7
+
+[node name="Button9" parent="." instance=ExtResource( 1 )]
+position = Vector2( -384, 128 )
+index = 8
+
+[node name="Button10" parent="." instance=ExtResource( 1 )]
+position = Vector2( -128, 128 )
+index = 9
+
+[node name="Button11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 128, 128 )
+index = 10
+
+[node name="Button12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 384, 128 )
+index = 11
+
+[node name="Button13" parent="." instance=ExtResource( 1 )]
+position = Vector2( -384, 384 )
+index = 12
+
+[node name="Button14" parent="." instance=ExtResource( 1 )]
+position = Vector2( -128, 384 )
+index = 13
+
+[node name="Button15" parent="." instance=ExtResource( 1 )]
+position = Vector2( 128, 384 )
+index = 14
+
+[node name="Button16" parent="." instance=ExtResource( 1 )]
+position = Vector2( 386.119, 384 )
+index = 15

@@ -1,0 +1,139 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/scripts/highlight_grid.gd" type="Script" id=1]
+[ext_resource path="res://assets/textures/button.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 256, 256 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 256, 0, 256, 256 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "blink",
+"speed": 3.0
+} ]
+
+[node name="HighlightGrid" type="Area2D"]
+input_pickable = false
+collision_layer = 2
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( -384, -384 )
+frames = SubResource( 3 )
+animation = "blink"
+frame = 1
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( -128, -384 )
+frames = SubResource( 3 )
+animation = "blink"
+frame = 1
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( 128, -384 )
+frames = SubResource( 3 )
+animation = "blink"
+frame = 1
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( 384, -384 )
+frames = SubResource( 3 )
+animation = "blink"
+frame = 1
+
+[node name="AnimatedSprite5" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( -384, -128 )
+frames = SubResource( 3 )
+animation = "blink"
+frame = 1
+
+[node name="AnimatedSprite6" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( -128, -128 )
+frames = SubResource( 3 )
+animation = "blink"
+frame = 1
+
+[node name="AnimatedSprite7" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( 128, -128 )
+frames = SubResource( 3 )
+animation = "blink"
+frame = 1
+
+[node name="AnimatedSprite8" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( 384, -128 )
+frames = SubResource( 3 )
+animation = "blink"
+frame = 1
+
+[node name="AnimatedSprite9" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( -384, 128 )
+frames = SubResource( 3 )
+animation = "blink"
+frame = 1
+
+[node name="AnimatedSprite10" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( -128, 128 )
+frames = SubResource( 3 )
+animation = "blink"
+frame = 1
+
+[node name="AnimatedSprite11" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( 128, 128 )
+frames = SubResource( 3 )
+animation = "blink"
+frame = 1
+
+[node name="AnimatedSprite12" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( 384, 128 )
+frames = SubResource( 3 )
+animation = "blink"
+frame = 1
+
+[node name="AnimatedSprite13" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( -384, 384 )
+frames = SubResource( 3 )
+animation = "blink"
+frame = 1
+
+[node name="AnimatedSprite14" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( -128, 384 )
+frames = SubResource( 3 )
+animation = "blink"
+frame = 1
+
+[node name="AnimatedSprite15" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( 128, 384 )
+frames = SubResource( 3 )
+animation = "blink"
+frame = 1
+
+[node name="AnimatedSprite16" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( 384, 384 )
+frames = SubResource( 3 )
+animation = "blink"
+frame = 1

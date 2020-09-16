@@ -1,0 +1,217 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/scripts/ui/difficulty_options.gd" type="Script" id=1]
+[ext_resource path="res://assets/scripts/ui/start_button.gd" type="Script" id=2]
+[ext_resource path="res://assets/scripts/ui/main_menu.gd" type="Script" id=3]
+[ext_resource path="res://assets/scripts/ui/game_type_options.gd" type="Script" id=4]
+[ext_resource path="res://font.tres" type="DynamicFont" id=5]
+
+[sub_resource type="Theme" id=1]
+default_font = ExtResource( 5 )
+
+[sub_resource type="Theme" id=2]
+default_font = ExtResource( 5 )
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 526.774, 272.985 )
+current = true
+zoom = Vector2( 0.6, 0.6 )
+
+[node name="GameTypeLabel" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 327.513
+margin_top = 251.972
+margin_right = 646.513
+margin_bottom = 332.972
+rect_scale = Vector2( 0.25, 0.25 )
+custom_fonts/font = ExtResource( 5 )
+text = "Game Type:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameTypeDropdown" type="OptionButton" parent="."]
+margin_left = 329.099
+margin_top = 269.905
+margin_right = 597.099
+margin_bottom = 356.905
+rect_scale = Vector2( 0.5, 0.5 )
+theme = SubResource( 1 )
+custom_fonts/font = ExtResource( 5 )
+text = "Standard"
+items = [ "Standard", null, false, 0, null, "Timed", null, false, 1, null ]
+selected = 0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DifficultyLabel" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 629.556
+margin_top = 251.972
+margin_right = 901.556
+margin_bottom = 332.972
+rect_scale = Vector2( 0.25, 0.25 )
+custom_fonts/font = ExtResource( 5 )
+text = "Difficulty:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DifficultyDropdown" type="OptionButton" parent="."]
+margin_left = 629.556
+margin_top = 269.905
+margin_right = 779.556
+margin_bottom = 356.905
+rect_scale = Vector2( 0.5, 0.5 )
+theme = SubResource( 2 )
+custom_fonts/font = ExtResource( 5 )
+text = "Easy"
+items = [ "Easy", null, false, 0, null, "Normal", null, false, 1, null, "Hard", null, false, 2, null ]
+selected = 0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="Button" parent="."]
+margin_left = 494.184
+margin_top = 382.786
+margin_right = 635.184
+margin_bottom = 469.786
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = ExtResource( 5 )
+text = "Start"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HighScoreLabel" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 494.184
+margin_top = 100.926
+margin_right = 569.184
+margin_bottom = 114.926
+rect_scale = Vector2( 0.25, 0.25 )
+custom_fonts/font = ExtResource( 5 )
+text = "High Scores"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HighScoreLabelStandard" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 431.184
+margin_top = 128.87
+margin_right = 506.184
+margin_bottom = 142.87
+rect_scale = Vector2( 0.25, 0.25 )
+custom_fonts/font = ExtResource( 5 )
+text = "Standard"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EasyModeHighScore" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 431.184
+margin_top = 162.076
+margin_right = 475.184
+margin_bottom = 176.076
+rect_scale = Vector2( 0.25, 0.25 )
+custom_fonts/font = ExtResource( 5 )
+text = "Easy: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NormalModeHighScore" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 431.184
+margin_top = 176.076
+margin_right = 494.184
+margin_bottom = 190.076
+rect_scale = Vector2( 0.25, 0.25 )
+custom_fonts/font = ExtResource( 5 )
+text = "Normal: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HardModeHighScore" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 431.184
+margin_top = 190.076
+margin_right = 477.184
+margin_bottom = 204.076
+rect_scale = Vector2( 0.25, 0.25 )
+custom_fonts/font = ExtResource( 5 )
+text = "Hard: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HighScoreLabelTimed" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 563.732
+margin_top = 128.87
+margin_right = 638.732
+margin_bottom = 142.87
+rect_scale = Vector2( 0.25, 0.25 )
+custom_fonts/font = ExtResource( 5 )
+text = "Timed"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EasyModeHighScoreTimed" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 565.319
+margin_top = 162.076
+margin_right = 609.319
+margin_bottom = 176.076
+rect_scale = Vector2( 0.25, 0.25 )
+custom_fonts/font = ExtResource( 5 )
+text = "Easy: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NormalModeHighScoreTimed" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 565.319
+margin_top = 176.076
+margin_right = 628.319
+margin_bottom = 190.076
+rect_scale = Vector2( 0.25, 0.25 )
+custom_fonts/font = ExtResource( 5 )
+text = "Normal: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HardModeHighScoreTimed" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 565.319
+margin_top = 190.076
+margin_right = 611.319
+margin_bottom = 204.076
+rect_scale = Vector2( 0.25, 0.25 )
+custom_fonts/font = ExtResource( 5 )
+text = "Hard: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="item_selected" from="GameTypeDropdown" to="GameTypeDropdown" method="_on_OptionDropdown_item_selected"]
+[connection signal="item_selected" from="DifficultyDropdown" to="DifficultyDropdown" method="_on_OptionDropdown_item_selected"]
+[connection signal="pressed" from="StartButton" to="StartButton" method="_on_StartButton_pressed"]

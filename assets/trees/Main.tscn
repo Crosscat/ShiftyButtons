@@ -1,0 +1,127 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/trees/Grid.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/trees/SolutionGrid.tscn" type="PackedScene" id=2]
+[ext_resource path="res://font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/scripts/main.gd" type="Script" id=4]
+[ext_resource path="res://assets/textures/grid-background.png" type="Texture" id=5]
+[ext_resource path="res://assets/textures/highlight.png" type="Texture" id=6]
+[ext_resource path="res://assets/trees/HighlightGrid.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/scripts/reset_button.gd" type="Script" id=8]
+
+[node name="Main" type="Node"]
+script = ExtResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 2, 2 )
+
+[node name="InteractableGridBG" type="Sprite" parent="."]
+position = Vector2( -421.666, 0 )
+texture = ExtResource( 5 )
+
+[node name="InteractableGrid" parent="." instance=ExtResource( 1 )]
+position = Vector2( -421.666, 0 )
+
+[node name="SolutionGridBG" type="Sprite" parent="."]
+position = Vector2( 584.824, -128 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 5 )
+
+[node name="SolutionGrid" parent="." instance=ExtResource( 2 )]
+position = Vector2( 584.824, -128 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="HighlightGrid" parent="." instance=ExtResource( 7 )]
+position = Vector2( -421.666, 0 )
+
+[node name="SolutionHighlightGrid" parent="." instance=ExtResource( 7 )]
+position = Vector2( 584.824, -128 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="SolutionLabel" type="RichTextLabel" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 495.224
+margin_top = -596.86
+margin_right = 894.42
+margin_bottom = -556.86
+rect_clip_content = false
+custom_fonts/normal_font = ExtResource( 3 )
+text = "Target:"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WinsLabel" type="RichTextLabel" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 405.624
+margin_top = 296.0
+margin_right = 805.624
+margin_bottom = 336.0
+rect_clip_content = false
+custom_fonts/normal_font = ExtResource( 3 )
+text = "Wins: 0"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MovesLabel" type="RichTextLabel" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 405.624
+margin_top = 374.473
+margin_right = 805.624
+margin_bottom = 414.473
+rect_clip_content = false
+custom_fonts/normal_font = ExtResource( 3 )
+text = "Moves: 0"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimerLabel" type="RichTextLabel" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 403.942
+margin_top = 374.473
+margin_right = 803.942
+margin_bottom = 414.473
+rect_clip_content = false
+custom_fonts/normal_font = ExtResource( 3 )
+text = "Time: 0"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AttemptsLabel" type="RichTextLabel" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 405.624
+margin_top = 446.207
+margin_right = 805.624
+margin_bottom = 486.207
+rect_clip_content = false
+custom_fonts/normal_font = ExtResource( 3 )
+text = "Attempts: 3"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Highlight" type="Sprite" parent="."]
+position = Vector2( -3588.26, -1204.48 )
+texture = ExtResource( 6 )
+
+[node name="ResetButton" type="Button" parent="."]
+margin_left = 403.942
+margin_top = 466.025
+margin_right = 451.942
+margin_bottom = 486.025
+rect_scale = Vector2( 4, 4 )
+text = "RESET"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ResetButton" to="." method="_on_ResetButton_pressed"]
